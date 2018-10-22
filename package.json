@@ -1,7 +1,5 @@
 {
-  "name": "powerbi-client-demo",
-  "version": "1.0.0",
-  "description": "Demonstration of embedding Power BI using JavaScript library.",
+  "name": "madhouse-reports",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,12 +14,6 @@
     "powerbi",
     "embedded"
   ],
-  "author": "Microsoft",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Microsoft/PowerBI-JavaScript/issues"
-  },
-  "homepage": "https://github.com/Microsoft/PowerBI-JavaScript/demo",
   "ignore": [
     "**/.*",
     "node_modules",
