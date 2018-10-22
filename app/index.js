@@ -32,8 +32,6 @@ function getMethods(obj) {
 
 function getUser() {
     return new Promise(function(resolve, reject) {
-        
-        //window.location.replace("https://my.madhouseio.org/.auth/me");
          var url = 'https://my.madhouseio.org/.auth/me';
          var request = new XMLHttpRequest();
     		 request.open('GET',url,true);
@@ -48,11 +46,7 @@ function getUser() {
                       resolve(userProfile);
             			}
             		};
-            try{
         	request.send();
-            }catch(error){
-                request.send();
-            }
       });
 }
 
