@@ -1,0 +1,9 @@
+{
+  "name": "madhouse reorts",
+  "devDependencies": 
+  {
+    "gulp": "3.9.0",
+    "gulp-zip": "3.0.2",
+    "minimist": "1.2.0"
+  }
+}
