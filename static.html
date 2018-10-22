@@ -12,7 +12,7 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <title>My Madhouse IO</title>
     <base path="/" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="styles/app.css" />
   </head>
   <body>
@@ -32,9 +32,10 @@
     		<button type="button" id="fullscreen" class="btn btn-warning">Fullscreen Mode</button>
           </p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.6.5/dist/powerbi.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/powerbi-client/dist/powerbi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-    <script>document.write("<script type='text/javascript' src='app/index.js?v=" + Date.now() + "'><\/script>");</script>
+    <script src="app/index.js"></script>
+   
   </body>
 </html>
