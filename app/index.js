@@ -45,7 +45,11 @@ function getUser() {
                       resolve(userProfile);
             			}
             		};
+            try{
         	request.send();
+            }catch{
+                request.send();
+            }
       });
 }
 
@@ -97,6 +101,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     });
         });
 });
-
-
-
