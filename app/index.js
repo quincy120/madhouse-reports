@@ -1,3 +1,6 @@
+//the CORS error happens when I push code from TFS. to remediate
+// i should just do manual updates of code to the pro server and then source the changes.
+
 function getPowerBIEmbededToken (userProfile) {
      //alert(userProfile);
     return new Promise(function(resolve, reject) {
