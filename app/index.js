@@ -1,7 +1,7 @@
 function getPowerBIEmbededToken (userProfile) {
      //alert(userProfile);
     return new Promise(function(resolve, reject) {
-        var url = 'https://madhouse-functions.azurewebsites.net/api/getPowerBIEmbededToken';
+        var url = 'https://madhouse-function.azurewebsites.net/api/getPowerBIEmbededToken';
         var request = new XMLHttpRequest();
     		request.open('GET',url,true);
     		request.onreadystatechange = function () {
