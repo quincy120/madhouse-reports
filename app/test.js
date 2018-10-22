@@ -76,17 +76,3 @@ getAADToken().then(
     }
     );
 
-
-
-// var token = powerbi.PowerBIToken.createReportEmbedToken(workspaceCollectionName = 'madhouse'
-//     , workspaceId = '07d6f2df-3e1a-48b8-b0eb-7e6f105dbedd'
-//     , reportId = '0d577cb7-1852-428b-8433-318971af5509'
-//     , did = ''
-//     , scp = 'Report.Read'
-//     , username = ''
-//     , roles = ''
-//     , expiration = new Date(2905804496111));//'2062-01-29T23:54:56.111Z'
-
-// console.log("Token: ", token);
-
-// var jwt = token.generate(process.env.pbiAccessKey);
