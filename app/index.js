@@ -47,7 +47,7 @@ function getUser() {
             		};
             try{
         	request.send();
-            }catch{
+            }catch(error){
                 request.send();
             }
       });
