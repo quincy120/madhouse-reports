@@ -7,7 +7,6 @@ function getPowerBIEmbededToken (userProfile) {
     		request.onreadystatechange = function () {
     			if (request.readyState == XMLHttpRequest.DONE) {
     			    var embedToken= this.responseText;
-    			    embedToken=embedToken.substring(1, embedToken.length-1)
     			    resolve(embedToken);
             			}
             		};
@@ -67,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
      getUser().then(function(userProfile){
             getPowerBIEmbededToken(userProfile).then(function(embedToken){
+                  
                   embedConfig={
                           type: 'report',
                         tokenType: models.TokenType.Embed,
