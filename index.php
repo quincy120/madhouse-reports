@@ -17,9 +17,9 @@
       <h1>My Madhouse IO Client Profile</h1>
      <h2>Financial Statements & Reports</h2>
       <ul id="navigation" class="nav nav-pills">
-          <li id="pageLogout" class="active"><a href="https://my.madhouseio.org/.auth/logout?post_logout_redirect_uri=https://madhouseio.org" id="logout">Logout</a></li>
-          <li id="pageEditProfile" class="active"><a href="https://login.microsoftonline.com/ionation.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_madhouse-customers-edit&amp;client_id=e7b7a0a4-203d-4756-9ff0-7708f3d87846&amp;nonce=defaultNonce&amp;redirect_uri=https%3A%2F%2Fmy.madhouseio.org&amp;scope=openid&amp;response_type=id_token">Edit Profile</a></li>
-          <li id="pageResetPassword" class="active"><a href="https://login.microsoftonline.com/ionation.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_madhouse-application-reset&amp;client_id=e7b7a0a4-203d-4756-9ff0-7708f3d87846&amp;nonce=defaultNonce&amp;redirect_uri=https%3A%2F%2Fmy.madhouseio.org&amp;scope=openid&amp;response_type=id_token">Reset Password</a></li>
+          <li id="pageLogout" class="active"><a href="<?php echo getenv('APPSETTING_PAGE_LOGOUT')?>" id="logout">Logout</a></li>
+          <li id="pageEditProfile" class="active"><a href="<?php echo getenv('APPSETTING_PAGE_EDIT')?>">Edit Profile</a></li>
+          <li id="pageResetPassword" class="active"><a href="<?php echo getenv('APPSETTING_PAGE_RESET')?>">Reset Password</a></li>
       </ul>
      <br>
     <div id="reportstatic" class="powerbi-container"></div>
@@ -36,7 +36,7 @@
     <script>
   function getPowerBIEmbededToken (userProfile) {
     return new Promise(function(resolve, reject) {
-        var url = 'https://madhouse-function.azurewebsites.net/api/getPowerBIEmbededToken';
+        var url = '<?php echo getenv('APPSETTING_PAGE_AUTH_TOKEN')?>';
         var request = new XMLHttpRequest();
     		request.open('GET',url,true);
     		request.onreadystatechange = function () {
@@ -51,7 +51,7 @@
 }
 function getUser() {
     return new Promise(function(resolve, reject) {
-         var url = 'https://my.madhouseio.org/.auth/me';
+         var url = '<?php echo getenv('APPSETTING_PAGE_ME')?>';
          var request = new XMLHttpRequest();
     		 request.open('GET',url,true);
     		 request.onreadystatechange = function () {
@@ -98,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                               type: 'report',
                             tokenType: models.TokenType.Embed,
                             accessToken:embedToken,
-                              id: '9712d264-c39c-463b-80b8-3ab043fa52aa',
-                            embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=9712d264-c39c-463b-80b8-3ab043fa52aa&groupId=670e140f-d697-4743-b3bc-d6b4af6879ca', 
+                              id: '<?php echo getenv('APPSETTING_REPORT_ID')?>',
+                            embedUrl: '<?php echo getenv('APPSETTING_REPORT_URL')?>', 
                               permissions: permissions,
                               settings: {
                                   filterPaneEnabled: false
